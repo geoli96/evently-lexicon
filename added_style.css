@@ -325,7 +325,6 @@ select {
 	display:flex;
 	gap: 12px;
 	justify-content:center;
-	text-align:center;
 	article{
 		display:flex;
 		flex-direction: column;
@@ -377,6 +376,9 @@ select {
 
 	.popular-events__events{
 		grid-template-columns: 1fr 1fr;
+	}
+	.info-section{
+	    text-align:center;
 	}
 }
 
