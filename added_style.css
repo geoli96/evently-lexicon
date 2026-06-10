@@ -187,12 +187,6 @@ a:hover {
 	padding-bottom: 2rem;
 }
 
-footer {
-	background-color: lightblue;
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-}
-
 .event-search-form {
 	display: flex;
 	flex-direction: column;
@@ -342,6 +336,12 @@ select {
 
 .info-section__article > img {
 	border-radius: 50%;
+}
+
+footer {
+	background-color: lightblue;
+	display:flex;
+	justify-content: space-between;
 }
 
 /* Responsive design tablet */
