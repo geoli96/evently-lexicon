@@ -320,6 +320,19 @@ select {
 	padding-right: 0.6rem;
 }
 
+.info-section{
+     margin:auto;
+	display:flex;
+	gap: 12px;
+	justify-content:center;
+	text-align:center;
+	article{
+		display:flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+}
+
 /* Responsive design tablet */
 @media (max-width: 1024px) {
 	.hero {
