@@ -352,11 +352,19 @@ footer{
 
 .footer_social-media-icons{
 	margin-top: 8px;
+	display: flex;
+	gap:8px;
 }
+
+.footer_social-media-icons svg{
+padding:0.3rem;
+	border-radius: 50%;
+	border:1px solid green;
+	cursor: pointer;
+	}
 
 .footer__links-container{
 	display: flex;
-	text-wrap: nowrap;
 	gap:60px;
 }
 
@@ -364,12 +372,12 @@ footer{
 	margin-bottom: 4px;
 }
 
-.footer__links-container li, .footer__links-container p{
+.footer__links-container li > p, .footer__links-container h4{
 	text-wrap: nowrap;
 	margin-top: 4px;
 }
 
-.footer__links-container li{
+.footer__links-container li > p{
 	cursor: pointer;
 }
 
@@ -446,11 +454,8 @@ footer{
 }
 .footer__links-container{
 	display: grid;
-	grid-template-columns: auto 1fr;
+	grid-template-columns: 1fr 1fr;
 	gap:20px;
-}
-.footer__links-container li, .footer__links-container p{
-	text-wrap: wrap;
 }
 }
 
