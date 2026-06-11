@@ -238,7 +238,6 @@ select {
   background-color: var(--btn-primary-bgColor);
   color: var(--btn-primary-textColor);
   padding: 12px;
-  margin-left: 12px;
   border-radius: var(--btn-primary-borderRadius);
   border: var(--btn-primary-border);
   cursor: pointer;
@@ -437,14 +436,8 @@ footer p {
   }
 
   .event-search-form__input-container {
-    grid-template-columns: auto auto;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "search-label category-label" "search-input category-select" "date-label ." "date-input submit-button";
-  }
-  .event-search-form__submit-button {
-    justify-self: flex-start;
-  }
-  .event-search-form__submit-button {
-    margin-left: 0px;
   }
 
   .popular-events__events {
