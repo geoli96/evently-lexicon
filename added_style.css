@@ -18,7 +18,7 @@ img {
 .footer-content,
 .info-section,
 .popular-events {
-	max-width: 1400px;
+	max-width: 1200px;
 	margin: auto;
 	padding-left: 2rem;
 	padding-right: 2rem;
@@ -162,11 +162,10 @@ a:hover {
 .hero__image-container-second img {
 	aspect-ratio: 1/1;
 	object-fit: cover;
-	border-radius: 12px;
 }
 
 .event-search-form-container {
-	background-color: #6600ff18;
+	background-color: var(--purple-200);
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -177,12 +176,6 @@ a:hover {
 }
 
 .popular-events-container {
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-}
-
-.info-section-container {
-	background-color: rgb(121, 209, 121);
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 }
@@ -307,7 +300,6 @@ select {
 }
 
 .popular-events__card-info-header-chip {
-	background-color: purple;
 	border-radius: 12px;
 	color: white;
 	font-size: small;
@@ -315,6 +307,20 @@ select {
 	padding-bottom: 0.5rem;
 	padding-left: 0.6rem;
 	padding-right: 0.6rem;
+}
+
+.popular-events__card-info-header-chip--nature {
+	background-color: rgb(19, 133, 32);
+}
+
+.popular-events__card-info-header-chip--city {
+	background-color: purple;
+}
+
+.info-section-container {
+	background-color: var(--emerald-100);
+	padding-top: 2rem;
+	padding-bottom: 2rem;
 }
 
 .info-section {
@@ -339,12 +345,12 @@ select {
 }
 
 footer{
-	background-color: lightblue;
+	background-color: var(--gray-900);
+	color: white;
 }
 
 .footer-content {
 	padding:2rem;
-	background-color: lightblue;
 	display:flex;
 	gap:20px;
 	justify-content: space-between;
@@ -359,7 +365,7 @@ footer{
 .footer_social-media-icons svg{
 padding:0.3rem;
 	border-radius: 50%;
-	border:1px solid green;
+	border:1px solid white;
 	cursor: pointer;
 	}
 
@@ -369,12 +375,15 @@ padding:0.3rem;
 }
 
 .footer__links-container h4{
-	margin-bottom: 4px;
+	margin-bottom: 8px;
+	text-wrap: nowrap;
 }
 
-.footer__links-container li > p, .footer__links-container h4{
+.footer__links-container p{
+	width: min-content;
 	text-wrap: nowrap;
 	margin-top: 8px;
+	color: var(--gray-300);
 }
 
 .footer__links-container li > p{
@@ -386,13 +395,6 @@ padding:0.3rem;
 	align-items: center;
 	gap:4px;
 	margin-bottom: 4px;
-}
-
-.footer__logo-container svg {
-	transform: translateY(2px);
-	padding:4rem;
-	border-radius: 50%;
-	border: 1px solid black;
 }
 
 .footer__info{
@@ -458,7 +460,7 @@ padding:0.3rem;
 .footer__links-container{
 	display: grid;
 	grid-template-columns: 1fr 1fr;
-	gap:20px;
+	gap:30px;
 }
 }
 
