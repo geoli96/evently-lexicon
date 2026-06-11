@@ -34,13 +34,11 @@ img {
 
 a {
 	color: black;
-	text-decoration: none;
 }
 a:visited {
 	color: inherit;
 }
-
-a:hover {
+.header__nav a:hover {
 	color: var(--primary-color);
 }
 
@@ -379,14 +377,14 @@ padding:0.3rem;
 	text-wrap: nowrap;
 }
 
-.footer__links-container p{
+.footer__links-container a{
 	width: min-content;
 	text-wrap: nowrap;
 	margin-top: 8px;
 	color: var(--gray-300);
 }
 
-.footer__links-container li > p{
+.footer__links-container li > a{
 	cursor: pointer;
 }
 
