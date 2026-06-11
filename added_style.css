@@ -376,7 +376,10 @@ footer {
 .footer__links-container a {
   width: min-content;
   text-wrap: nowrap;
-  margin-top: 8px;
+  color: var(--gray-300);
+}
+
+.footer__links-container p {
   color: var(--gray-300);
 }
 
