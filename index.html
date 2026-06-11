@@ -1,231 +1,524 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="sv">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Evently - Hitta lokala evenemang du kommer älska</title>
+		<!-- Google Fonts Preconnect and Links for Variable Fonts: Inter and Poppins -->
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="globals.css" />
+		<link rel="stylesheet" href="added_style.css" />
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Evently - Hitta lokala evenemang du kommer älska</title>
-    <!-- Google Fonts Preconnect and Links for Variable Fonts: Inter and Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-	<link rel="stylesheet" href="added_style.css">
-</head>
-	
-<body>
-    <!-- SVGs -->
+	<body>
+		<div class="layout-container">
+			<!-- Header -->
+			<header class="header">
+				<!-- Navigation menu -->
+				<nav>
+					<ul class="header__nav">
+						<li>
+							<a href="#">
+								<!-- logo icon -->
 
-    <!-- logo icon -->
-    <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true">
-        <path
-            d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z" />
-    </svg>
+								<svg
+									width="32"
+									height="32"
+									viewBox="0 0 24 24"
+									fill="currentColor"
+									xmlns="http://www.w3.org/2000/svg"
+									aria-hidden="true"
+									role="img"
+								>
+									<title>Sparkles</title>
+									<path
+										d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
+									/>
+								</svg>
 
-    <!-- spyglass icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <circle cx="11" cy="11" r="8"></circle>
-        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
-    </svg>
+								<h2>Evently</h2>
+							</a>
+						</li>
+						<li class="header__nav-submenu">
+							<ul>
+								<li><a href="#">Hem</a></li>
+								<li>
+									<a href="#">Evenemang</a>
+								</li>
+								<li><a href="#">Kategorier</a></li>
+								<li><a href="#">Om oss</a></li>
+								<li><a href="#">Kontakt</a></li>
+							</ul>
+						</li>
+						<li class="header__nav-right-container">
+							<!-- spyglass icon -->
+							<svg
+								class="header__spyglass-icon"
+								width="20"
+								height="20"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round"
+								aria-hidden="true"
+							>
+								<title>Inspector glass</title>
+								<circle cx="11" cy="11" r="8"></circle>
+								<line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+							</svg>
+							<button class="header__create-account-button" href="#">
+								Skapa konto
+							</button>
+							<!-- hamburger icon -->
+							<button class="header__responsive-menu-button">
+								<svg
+									class="header__responsive-menu-icon"
+									width="24"
+									height="24"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<title>Hamburger menu icon</title>
+									<line x1="4" y1="12" x2="20" y2="12"></line>
+									<line x1="4" y1="6" x2="20" y2="6"></line>
+									<line x1="4" y1="18" x2="20" y2="18"></line>
+								</svg>
+							</button>
+						</li>
+					</ul>
+				</nav>
+			</header>
 
-    <!-- hamburger icon -->
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <line x1="4" y1="12" x2="20" y2="12"></line>
-        <line x1="4" y1="6" x2="20" y2="6"></line>
-        <line x1="4" y1="18" x2="20" y2="18"></line>
-    </svg>
+			<!-- Main content -->
+			<main>
+				<div class="container-main">
+					<section
+						role="contentinfo"
+						aria-label="Placeholder label"
+						class="hero"
+					>
+						<section
+							role="contentinfo"
+							aria-label="Placeholder label"
+							class="hero__title-container"
+						>
+							<p class="hero__title-chip">Upptäck. Upplev. Minns.</p>
 
-    <!-- heart icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path
-            d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z">
-        </path>
-    </svg>
+							<h1>Hitta lokala evenemang du kommer älska</h1>
 
-    <!-- ticket icon -->
-    <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path
-            d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z">
-        </path>
-        <line x1="9" y1="5" x2="9" y2="19"></line>
-    </svg>
+							<p>
+								Från konserter och marknader till workshops och
+								familjeaktiviteter. Upptäck vad som händer nära dig.
+							</p>
 
-    <!-- people icon -->
-    <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-        <circle cx="9" cy="7" r="4"></circle>
-        <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-        <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-    </svg>
+							<div class="hero__title-buttons">
+								<button class="hero__button-primary">Utforska evenemang</button>
+								<button class="hero__button-secondary">Se helgens tips</button>
+							</div>
+						</section>
+						<section
+							role="contentinfo"
+							aria-label="Placeholder label"
+							class="hero__images"
+						>
+							<img src="./images/nature_1.jpg" alt="Solnedgång med utsikt över berg"/>
+							<div class="hero__image-container-second">
+								<img src="./images/nature_2.jpg" alt="Klart ljusblått vatten med berg omkring"/>
+								<img src="./images/nature_3.jpg" alt="Berg med klar natthimmel i bakgrunden"/>
+							</div>
+						</section>
+						<section
+							role="contentinfo"
+							aria-label="Placeholder label"
+							class="hero__responsive-images"
+						>
+							<img src="./images/nature_1.jpg" alt="Solnedgång med utsikt över berg" />
+							<img src="./images/nature_2.jpg" alt="Klart ljusblått vatten med berg omkring"/>
+							<img src="./images/nature_3.jpg" alt="Berg med klar natthimmel i bakgrunden"/>
+						</section>
+					</section>
 
-    <!-- location icon -->
-    <svg class="m-1 text-emerald-800" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-        <circle cx="12" cy="10" r="3"></circle>
-    </svg>
+					<section
+						class="event-search-form-container"
+						role="contentinfo"
+						aria-label="Sök efter evenemang via sökord, kategori och datum"
+					>
+						<form class="event-search-form">
+							<h2>Hitta rätt evenemang</h2>
 
-    <!-- instagram icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-        <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-    </svg>
+							<div class="event-search-form__input-container">
+								<label
+									class="event-search-form__search-label"
+									for="event-search"
+									>Sökord</label
+								>
+								<label
+									class="event-search-form__category-label"
+									for="event-category"
+									>Kategori</label
+								>
+								<label class="event-search-form__date-label" for="event-date"
+									>Datum</label
+								>
+								<input
+									type="search"
+									id="event-search"
+									class="event-search-form__search-input"
+									name="event_search"
+									required
+									placeholder="Sök på t.ex konsert, yoga..."
+								/>
+								<select
+									class="event-search-form__category-select"
+									name="event_category"
+									id="event-category"
+									required
+								>
+									<option value="all" selected>Alla kategorier</option>
+									<option value="concert">Konsert</option>
+									<option value="market">Marknad</option>
+									<option value="workshop">Workshop</option>
+									<option value="family">Familj</option>
+									<option value="sport">Sport / Hälsa</option>
+								</select>
+								<input
+									class="event-search-form__date-input"
+									type="date"
+									id="event-date"
+									name="event_date"
+								/>
+								<button
+									class="event-search-form__submit-button"
+									type="submit"
+									disabled
+								>
+									Sök evenemang
+								</button>
+							</div>
+						</form>
+					</section>
 
-    <!-- facebook icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
-    </svg>
+					<div class="popular-events-container">
+						<section class="popular-events" role="contentinfo">
+							<div class="popular-events__header">
+								<h2>Populära evenemang</h2>
+								<a href="#">Se alla evenemang</a>
+							</div>
+							<div class="popular-events__events">
+								<article class="popular-events__event-card">
+									<img src="./images/nature_1.jpg" alt="Solnedgång med utsikt över berg"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--nature">
+												Natur
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Hike i naturen</a></h3>
+										<p>Pustervik, Göteborg</p>
+									</div>
+								</article>
+								<article class="popular-events__event-card">
+									<img src="./images/nature_2.jpg" alt="Klart ljusblått vatten med berg omkring"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--nature">
+												Natur
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Hike i naturen</a></h3>
+										<p>Pustervik, Göteborg</p>
+									</div>
+								</article>
+								<article class="popular-events__event-card">
+									<img src="./images/nature_3.jpg" alt="Berg med klar natthimmel i bakgrunden"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--nature">
+												Natur
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Hike i naturen</a></h3>
+										<p>Pustervik, Göteborg</p>
+									</div>
+								</article>
+								<article class="popular-events__event-card">
+									<img src="./images/nature_4.jpg" alt="Utsikt över hav från berg"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--nature">
+												Natur
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Hike i naturen</a></h3>
+										<p>Pustervik, Göteborg</p>
+									</div>
+								</article>
+								<article class="popular-events__event-card">
+									<img src="./images/nature_5.jpg" alt="Vy över stadsbyggnader"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--city">
+												Stad
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Stadspromenad</a></h3>
+										<p>New Haven, New York</p>
+									</div>
+								</article>
+								<article class="popular-events__event-card">
+									<img src="./images/nature_6.jpg" alt="Gräsplätt med berg i bakgrunden"/>
+									<div class="popular-events__card-info-container">
+										<div class="popular-events__card-info-header">
+											<p class="popular-events__card-info-header-chip popular-events__card-info-header-chip--nature">
+												Natur
+											</p>
+											<p>24 maj</p>
+										</div>
+										<h3><a href="#">Hike i naturen</a></h3>
+										<p>Pustervik, Göteborg</p>
+									</div>
+								</article>
+							</div>
+						</section>
+					</div>
 
-    <!-- x icon -->
-    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-        stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-        <path
-            d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z">
-        </path>
-    </svg>
+					<div class="info-section-container">
+						<section
+							class="info-section"
+							role="contentinfo"
+							aria-label="Positivt med Evently"
+						>
+							<article class="info-section__article">
+								<div class="info-section__svg-container">
+								<!-- ticket icon -->
+								<svg
+									class="m-1 text-emerald-800"
+									width="40"
+									height="40"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<title>Ticket icon</title>
+									<path
+										d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"
+									></path>
+									<line x1="9" y1="5" x2="9" y2="19"></line>
+								</svg>
+								</div>
+								<div>
+									<h3>Gratis & prisvärt</h3>
+									<p>
+										Hitta massor av evenemang som är gratis eller snälla mot
+										plånboken.
+									</p>
+								</div>
+							</article>
+							<article class="info-section__article">
+								<div class="info-section__svg-container">
+								<!-- people icon -->
+								<svg
+									class="m-1 text-emerald-800"
+									width="40"
+									height="40"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<title>People icon</title>
+									<path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+									<circle cx="9" cy="7" r="4"></circle>
+									<path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+									<path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+								</svg>
+								</div>
+								<div>
+									<h3>För alla åldrar</h3>
+									<p>
+										Aktiviteter för både stora och små - hitta något som passar
+										hela familjen.
+									</p>
+								</div>
+							</article>
+							<article class="info-section__article">
+								<div class="info-section__svg-container">
+								<!-- location icon -->
+								<svg
+									class="m-1 text-emerald-800"
+									width="40"
+									height="40"
+									viewBox="0 0 24 24"
+									fill="none"
+									stroke="currentColor"
+									stroke-width="2"
+									stroke-linecap="round"
+									stroke-linejoin="round"
+									aria-hidden="true"
+								>
+									<title>Location icon</title>
+									<path
+										d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"
+									></path>
+									<circle cx="12" cy="10" r="3"></circle>
+								</svg>
+								</div>
+								<div>
+									<h3>Nära dig</h3>
+									<p>
+										Upptäck evenemang i ditt område och stöd lokala arrangörer.
+									</p>
+								</div>
+							</article>
+						</section>
+					</div>
+				</div>
+			</main>
 
-	<div class="layout-container">
-    <!-- Header -->
-    <header class="header">
-        Evently
+			<!-- Footer -->
+			<footer>
+				<div class="footer-content">
+					<section
+						role="contentinfo"
+						aria-label="Information om vad Evently gör"
+						class="footer__info">
+				
+						<div class="footer__logo-container">
+							<svg
+			width="32"
+			height="32"
+			viewBox="0 0 24 24"
+			fill="currentColor"
+			xmlns="http://www.w3.org/2000/svg"
+			aria-hidden="true"
+		>
+			<title>Sparkles icon</title>
+			<path
+				d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
+			/>
+		</svg>
 
-        Hem
-        Evenemang
-        Kategorier
-        Om oss
-        Kontakt
+						<h3>Evently</h3>
+				</div>
+						<p>
+							Evently samlar lokala evenemang så att du enkelt kan upptäcka,
+							planera och dela upplevelser som berikar din vardag.
+						</p>
+						<div class="footer_social-media-icons">
+							<a href="#">
+<!-- instagram icon -->
+		<svg
+			width="30"
+			height="30"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<title>Instagram icon</title>
+			<rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+			<path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+			<line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+		</svg>
+	</a>
+		<a href="#">
+							<!-- facebook icon -->
+		<svg
+			width="30"
+			height="30"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<title>Facebook icon</title>
+			<path
+				d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+			></path>
+		</svg>
+	</a>
+		<a href="#">
+							<!-- x icon -->
+		<svg
+			width="30"
+			height="30"
+			viewBox="0 0 24 24"
+			fill="none"
+			stroke="currentColor"
+			stroke-width="2"
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			aria-hidden="true"
+		>
+			<title>X icon</title>
+			<path
+				d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+			></path>
+		</svg>
+	</a>
+						</div>
+					</section>
+					<section class="footer__links-container">
+						<section role="contentinfo" aria-label="Utforska evenemang">
+							<h4>Utforska</h4>
+							<ul>
+								<li><a href="#">Alla evenemang</a></li>
+								<li><a href="#">Kategorier</a></li>
+								<li><a href="#">Helgens tips</a></li>
+								<li><a href="#">Populära</a></li>
+							</ul>
+						</section>
 
-        Skapa konto
-    </header>
+						<section role="contentinfo" aria-label="Information om Evently">
+							<h4>Om Evently</h4>
+							<ul>
+								<li><a href="#">Om oss</a></li>
+								<li><a href="#">För arrangörer</a></li>
+								<li><a href="#">Vanliga frågor</a></li>
+								<li><a href="#">Nyheter</a></li>
+							</ul>
+						</section>
 
-
-    <!-- Main content -->
-    <main>
-		<section role="contentinfo" aria-label="Placeholder label">
-        Upptäck. Upplev. Minns.
-
-        Hitta lokala evenemang du kommer älska
-
-        Från konserter och marknader till workshops och familjeaktiviteter. Upptäck vad som händer nära dig.
-
-        Utforska evenemang
-        Se helgens tips
-        <img src="/placeholder-img"/>
-		</section>
-
-		<section role="contentinfo" aria-label="Placeholder label">
-        Hitta rätt evenemang
-
-        Sökord
-        Kategori
-        Alla kategorier
-        Konsert
-        Marknad
-        Workshop
-        Familj
-        Sport / Hälsa
-        Datum
-        Sök evenemang
-		</section>
-
-		<section role="contentinfo" aria-label="Placeholder label">
-        Populära evenemang
-        Se alla evenemang
-
-        Indie Night med Nova Sun
-        Konsert
-        24 maj
-        Pustervik, Göteborg
-
-        Vårmarknad i Slottsskogen
-        Marknad
-        25 maj
-        Slottsskogen, Göteborg
-
-        Keramikkurs för nybörjare
-        Workshop
-        27 maj
-        Studio Lera, Göteborg
-
-        Barnteater: Den lilla sjöjungfrun
-        Familj
-        31 maj
-        Folkteatern, Göteborg
-
-        Morgonlöpning & frukost
-        Sport
-        1 juni
-        Slottsskogen, Göteborg
-
-
-        Jazzkväll på Vasateatern
-        Konsert
-        3 juni
-        Vasateatern, Göteborg
-		</section>
-
-		<section role="contentinfo" aria-label="Placeholder label">
-
-        Gratis & prisvärt
-        Hitta massor av evenemang som är gratis eller snälla mot plånboken.
-
-
-        För alla åldrar
-        Aktiviteter för både stora och små - hitta något som passar hela familjen.
-
-        Nära dig
-        Upptäck evenemang i ditt område och stöd lokala arrangörer.
-		</section>
-    </main>
-
-    <!-- Footer -->
-    <footer>
-		<section role="contentinfo" aria-label="Placeholder label">
-        Evently
-        Evently samlar lokala evenemang så att du enkelt kan upptäcka, planera och dela upplevelser som berikar din
-        vardag.
-
-		</section>
-
-
-		<section role="contentinfo" aria-label="Placeholder label">
-        Utforska
-        Alla evenemang
-        Kategorier
-        Helgens tips
-        Populära
-		</section>
-
-		<section role="contentinfo" aria-label="Placeholder label">
-        Om Evently
-        Om oss
-        För arrangörer
-        Vanliga frågor
-        Nyheter
-		</section>
-
-		<section role="contentinfo" aria-label="Placeholder label">
-        Kontakt
-        info@evently.se
-        031-123 45 67
-        Stora Badhusgatan 18
-        411 21 Göteborg
-		</section>
-    </footer>
-
-	</div>
-
-</body>
-
+						<section role="contentinfo" aria-label="Kontaktinformation">
+							<h4>Kontakt</h4>
+							<p>info@evently.se</p>
+							<p>031-123 45 67</p>
+							<p>Stora Badhusgatan 18 411 21 Göteborg</p>
+						</section>
+					</section>
+				</div>
+			</footer>
+		</div>
+	</body>
 </html>

@@ -1,0 +1,17 @@
+:root {
+	/* btn-primary */
+	--btn-primary-padding: 0.8rem;
+	--btn-primary-bgColor: #6700ff;
+	--btn-primary-borderRadius: 4px;
+	--btn-primary-border: 0px;
+	--btn-primary-textColor: white;
+
+	/* btn-secondary */
+	--btn-secondary-padding: 0.8rem;
+	--btn-secondary-bgColor: white;
+	--btn-secondary-borderRadius: 4px;
+	--btn-secondary-border: 1px solid #6700ff;
+	--btn-secondary-textColor: #6700ff;
+
+	--primary-color:#6700ff;
+}
