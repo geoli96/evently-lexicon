@@ -140,7 +140,7 @@ a:visited {
 }
 
 .hero__title-chip {
-	background-color: rgb(19, 133, 32);
+	background-color: green;
 	border-radius: 12px;
 	color: white;
 	font-size: small;
@@ -308,7 +308,7 @@ select {
 }
 
 .popular-events__card-info-header-chip--nature {
-	background-color: rgb(19, 133, 32);
+	background-color: green;
 }
 
 .popular-events__card-info-header-chip--city {
